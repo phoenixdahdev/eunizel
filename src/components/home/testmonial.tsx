@@ -89,7 +89,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-4 text-4xl font-bold text-[#099250] md:text-5xl"
+            className="mb-4 font-mono text-4xl font-bold text-[#099250] md:text-5xl"
           >
             Real Stories, Real Results
           </motion.h2>

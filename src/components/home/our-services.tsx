@@ -102,7 +102,7 @@ export default function OurServices() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="mb-4 text-4xl font-bold text-[#101828] md:text-5xl">
+          <h2 className="mb-4 font-mono text-4xl font-bold text-[#101828] md:text-5xl">
             Our Services
           </h2>
           <p className="max-w-2xl text-lg text-[#475467]">

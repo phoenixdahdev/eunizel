@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { Plus, Minus, MessageCircle } from 'lucide-react'
+import Link from 'next/link'
 
 const faqs = [
   {
@@ -137,7 +138,7 @@ export default function FAQ() {
             <MessageCircle className="h-8 w-8 text-[#099250]" />
           </motion.div>
 
-          <h3 className="mb-3 text-2xl font-bold text-[#101828] md:text-3xl">
+          <h3 className="mb-3 font-mono text-2xl font-bold text-[#101828] md:text-3xl">
             Have More Questions?
           </h3>
           <p className="mb-8 text-base text-[#667085] md:text-lg">
@@ -145,9 +146,11 @@ export default function FAQ() {
             detailed FAQs
           </p>
 
-          <motion.button className="rounded-lg bg-[#099250] px-8 py-3 font-medium text-white transition-colors hover:bg-[#088045]">
-            See Our Faqs
-          </motion.button>
+          <Link href="/faqs" passHref>
+            <motion.button className="rounded-lg bg-[#099250] px-8 py-3 font-medium text-white transition-colors hover:bg-[#088045]">
+              See Our Faqs
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

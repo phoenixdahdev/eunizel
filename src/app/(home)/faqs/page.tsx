@@ -60,14 +60,9 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <h2 className="mb-4 text-3xl font-bold text-[#285219] md:text-4xl lg:text-5xl">
-            <span className="underline decoration-2 underline-offset-8">
-              FREQUENTLY
-            </span>{' '}
-            ASKED{' '}
-            <span className="underline decoration-2 underline-offset-8">
-              QUESTIONS
-            </span>
+          <h2 className="mb-4 font-mono text-3xl font-bold text-[#285219] md:text-4xl lg:text-5xl">
+            <span className="">FREQUENTLY</span> ASKED{' '}
+            <span className="">QUESTIONS</span>
           </h2>
           <p className="mx-auto max-w-2xl text-base text-[#667085] md:text-lg">
             Everything you need to know about our product and services.
@@ -164,7 +159,7 @@ export default function FAQ() {
             />
           </motion.div>
 
-          <h3 className="mb-3 text-2xl font-bold tracking-wide text-[#101828] uppercase md:text-3xl">
+          <h3 className="mb-3 font-mono text-2xl font-bold tracking-wide text-[#101828] uppercase md:text-3xl">
             Still Have Questions?
           </h3>
           <p className="mb-8 text-base text-[#667085] md:text-lg">
