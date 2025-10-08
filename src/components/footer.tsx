@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 const footerLinks = {
   company: [
-    { label: 'Overview', href: '#overview' },
-    { label: 'About Us', href: '#about' },
+    // { label: 'Overview', href: '#overview' },
+    // { label: 'About Us', href: '#about' },
     { label: 'Our Services', href: '#services' },
     { label: 'Contact Us', href: '#contact' },
   ],

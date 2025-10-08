@@ -126,37 +126,35 @@ export default function Header() {
               />
             </motion.div>
 
-            {['About Us', 'Our Services', 'FAQs', 'Load Calculator'].map(
-              (item, index) => {
-                const href =
-                  item === 'About Us'
-                    ? '/about'
-                    : item === 'Our Services'
-                      ? '/services'
-                      : item === 'FAQs'
-                        ? '/faqs'
-                        : '/calculator'
-                return (
-                  <motion.div
-                    key={index}
-                    className="relative"
-                    whileHover="hover"
-                    initial="initial"
+            {['FAQs', 'Load Calculator'].map((item, index) => {
+              const href =
+                item === 'About Us'
+                  ? '/about'
+                  : item === 'Our Services'
+                    ? '/services'
+                    : item === 'FAQs'
+                      ? '/faqs'
+                      : '/calculator'
+              return (
+                <motion.div
+                  key={index}
+                  className="relative"
+                  whileHover="hover"
+                  initial="initial"
+                >
+                  <Link
+                    href={href}
+                    className="text-[15px] font-medium text-[#98a2b3] transition-colors duration-300 hover:text-[#667085]"
                   >
-                    <Link
-                      href={href}
-                      className="text-[15px] font-medium text-[#98a2b3] transition-colors duration-300 hover:text-[#667085]"
-                    >
-                      {item}
-                    </Link>
-                    <motion.div
-                      variants={underlineVariants}
-                      className="absolute bottom-[-4px] left-0 h-0.5 bg-[#099250]"
-                    />
-                  </motion.div>
-                )
-              }
-            )}
+                    {item}
+                  </Link>
+                  <motion.div
+                    variants={underlineVariants}
+                    className="absolute bottom-[-4px] left-0 h-0.5 bg-[#099250]"
+                  />
+                </motion.div>
+              )
+            })}
           </nav>
           {/* </CHANGE> */}
 
@@ -212,8 +210,6 @@ export default function Header() {
                 </motion.div>
 
                 {[
-                  { name: 'About Us', href: '/about' },
-                  { name: 'Our Services', href: '/services' },
                   { name: 'FAQs', href: '/faqs' },
                   { name: 'Load Calculator', href: '/calculator' },
                 ].map((item, index) => (

@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
+import Link from 'next/link'
 
 const faqs = [
   {
@@ -171,13 +172,15 @@ export default function FAQ() {
             friendly team.
           </p>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="rounded-lg bg-[#099250] px-8 py-3 font-medium tracking-wide text-white uppercase transition-colors hover:bg-[#088045]"
-          >
-            Contact Us
-          </motion.button>
+          <Link href="/contact" passHref>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="rounded-lg bg-[#099250] px-8 py-3 font-medium tracking-wide text-white uppercase transition-colors hover:bg-[#088045]"
+            >
+              Contact Us
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
