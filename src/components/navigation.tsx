@@ -5,9 +5,12 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence, Variants } from 'framer-motion'
+import { cn } from '~/lib/utils'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const path = usePathname()
 
   const mobileMenuVariants: Variants = {
     hidden: {
@@ -86,9 +89,12 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="sticky top-0 z-50 border-b border-gray-100 bg-white backdrop-blur-sm"
+      className={cn(
+        'absolute top-0 right-0 left-0 z-50 backdrop-blur-sm',
+        path === '/' ? 'bg-transparent' : 'bg-white'
+      )}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
@@ -116,25 +122,21 @@ export default function Header() {
             >
               <Link
                 href="/"
-                className="text-[15px] font-semibold text-[#099250] transition-colors duration-300 hover:text-[#099250]"
+                className={cn(
+                  'text-[15px] font-semibold transition-colors duration-300',
+                  path === '/' ? 'text-white hover:text-white/80' : ''
+                )}
               >
                 Home
               </Link>
               <motion.div
-                className="absolute bottom-[-4px] left-0 h-0.5 bg-[#099250]"
+                className="absolute bottom-[-4px] left-0 h-0.5 bg-white"
                 initial={{ width: '100%' }}
               />
             </motion.div>
 
             {['FAQs', 'Load Calculator'].map((item, index) => {
-              const href =
-                item === 'About Us'
-                  ? '/about'
-                  : item === 'Our Services'
-                    ? '/services'
-                    : item === 'FAQs'
-                      ? '/faqs'
-                      : '/calculator'
+              const href = item === 'FAQs' ? '/faqs' : '/calculator'
               return (
                 <motion.div
                   key={index}
@@ -144,19 +146,21 @@ export default function Header() {
                 >
                   <Link
                     href={href}
-                    className="text-[15px] font-medium text-[#98a2b3] transition-colors duration-300 hover:text-[#667085]"
+                    className={cn(
+                      'text-[15px] font-medium text-[#98a2b3] transition-colors duration-300 hover:text-[#667085]',
+                      path === '/' ? 'text-white hover:text-white/80' : ''
+                    )}
                   >
                     {item}
                   </Link>
                   <motion.div
                     variants={underlineVariants}
-                    className="absolute bottom-[-4px] left-0 h-0.5 bg-[#099250]"
+                    className="absolute bottom-[-4px] left-0 h-0.5 bg-white"
                   />
                 </motion.div>
               )
             })}
           </nav>
-          {/* </CHANGE> */}
 
           <motion.div
             variants={buttonVariants}
@@ -171,11 +175,10 @@ export default function Header() {
               Contact Us
             </Link>
           </motion.div>
-          {/* </CHANGE> */}
 
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-[#667085] transition-colors duration-300 hover:text-[#099250] lg:hidden"
+            className="p-2 text-white transition-colors duration-300 hover:text-white/80 lg:hidden"
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}
           >
@@ -186,7 +189,6 @@ export default function Header() {
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.div>
           </motion.button>
-          {/* </CHANGE> */}
         </div>
 
         <AnimatePresence>
@@ -198,11 +200,11 @@ export default function Header() {
               exit="hidden"
               className="overflow-hidden lg:hidden"
             >
-              <nav className="flex flex-col gap-4 border-t border-gray-100 py-4">
+              <nav className="flex flex-col gap-4 border-t border-white/20 py-4">
                 <motion.div variants={mobileMenuItemVariants}>
                   <Link
                     href="/"
-                    className="block text-[15px] font-semibold text-[#099250] transition-all duration-300 hover:text-[#099250]"
+                    className="block text-[15px] font-semibold text-white transition-all duration-300 hover:text-white/80"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
@@ -220,7 +222,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="block text-[15px] font-medium text-[#98a2b3] transition-colors duration-300 hover:text-[#667085]"
+                      className="block text-[15px] font-medium text-white/80 transition-colors duration-300 hover:text-white"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -246,7 +248,6 @@ export default function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-        {/* </CHANGE> */}
       </div>
     </motion.header>
   )

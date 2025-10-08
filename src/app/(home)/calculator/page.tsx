@@ -4,7 +4,7 @@ import { LoadCalculator } from './load-calculator'
 const page = () => {
   return (
     <>
-      <section className="bg-[#095c37] py-16 text-white">
+      <section className="bg-[#095c37] py-16 text-white md:py-30">
         <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 font-mono text-4xl font-bold text-balance md:text-5xl">
             Load Calculator

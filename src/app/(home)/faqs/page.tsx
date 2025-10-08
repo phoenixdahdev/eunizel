@@ -46,7 +46,7 @@ export default function FAQ() {
   }
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24">
+    <section className="relative overflow-hidden py-16 md:py-30">
       {/* Decorative circles */}
       <div className="absolute top-0 left-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d1fadf] opacity-30 blur-3xl" />
       <div className="absolute right-0 bottom-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-[#d1fadf] opacity-30 blur-3xl" />
