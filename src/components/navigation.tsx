@@ -104,7 +104,7 @@ export default function Header() {
               className="relative"
             >
               <Image
-                src="/logo.png"
+                src={path === '/' ? '/logo2.png' : '/logo.png'}
                 alt="Eunizel Logo"
                 width={140}
                 height={44}
