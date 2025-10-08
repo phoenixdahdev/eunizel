@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import FAQ from '~/components/home/faq'
 import Hero from '~/components/home/hero'
 import OurServices from '~/components/home/our-services'
 import Testimonials from '~/components/home/testmonial'
@@ -11,6 +12,7 @@ export default function Home() {
       <WhyChooseUs />
       <OurServices />
       <Testimonials />
+      <FAQ />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Footer from '~/components/footer'
 import Header from '~/components/navigation'
 
 export default async function Layout({ children }: { children: ReactNode }) {
@@ -6,6 +7,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
     <main className="font-sans">
       <Header />
       {children}
+      <Footer />
     </main>
   )
 }
