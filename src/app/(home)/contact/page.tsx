@@ -24,8 +24,8 @@ const contactMethods = [
     icon: Phone,
     title: 'Phone',
     description: 'Mon-Fri from 8am to 5pm.',
-    contact: '+234 (803) 000-0000',
-    link: 'tel:+2348030000000',
+    contact: '+234 (816) 351-5248',
+    link: 'tel:+2348163515248',
   },
 ]
 
