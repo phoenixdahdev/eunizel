@@ -20,7 +20,7 @@ const footerLinks = {
       label: 'Facebook',
       href: 'https://web.facebook.com/profile.php?id=61578290145518',
     },
-    { label: 'Instagram', href: 'https://instagram.com/eunizelenergyltd' },
+    { label: 'Instagram', href: 'https://instagram.com/eunizel_energy_ltd' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@eunizelenergyltd' },
   ],
   legal: [
