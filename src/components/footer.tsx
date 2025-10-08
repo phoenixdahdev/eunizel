@@ -12,7 +12,6 @@ const footerLinks = {
     { label: 'Contact Us', href: '#contact' },
   ],
   social: [
-    { label: 'Twitter', href: 'https://twitter.com' },
     {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/company/eunizel-energy-ltd/',
