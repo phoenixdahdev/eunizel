@@ -74,7 +74,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <motion.h1
-          className="mb-6 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl"
+          className="mb-6 font-mono text-4xl leading-tight font-bold md:text-5xl lg:text-6xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
