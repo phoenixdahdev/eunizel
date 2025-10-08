@@ -13,9 +13,16 @@ const footerLinks = {
   ],
   social: [
     { label: 'Twitter', href: 'https://twitter.com' },
-    { label: 'LinkedIn', href: 'https://linkedin.com' },
-    { label: 'Facebook', href: 'https://facebook.com' },
-    { label: 'TikTok', href: 'https://tiktok.com' },
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/eunizel-energy-ltd/',
+    },
+    {
+      label: 'Facebook',
+      href: 'https://web.facebook.com/profile.php?id=61578290145518',
+    },
+    { label: 'Instagram', href: 'https://instagram.com/eunizelenergyltd' },
+    { label: 'TikTok', href: 'https://www.tiktok.com/@eunizelenergyltd' },
   ],
   legal: [
     { label: 'Terms', href: '#terms' },
