@@ -9,8 +9,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     description: 'Our friendly team is here to help.',
-    contact: 'hello@euniizelenergy.com',
-    link: 'mailto:hello@euniizelenergy.com',
+    contact: 'hello@eunizelenergy.com',
+    link: 'mailto:hello@eunizelenergy.com',
   },
   {
     icon: Building2,
