@@ -115,21 +115,15 @@ export function LoadCalculator() {
   const [backupTime, setBackupTime] = useState(0)
 
   useEffect(() => {
-    // Calculate total load
     const total = appliances.reduce((sum, appliance) => {
       return sum + appliance.quantity * appliance.power
     }, 0)
     setTotalLoad(total)
-
-    // Calculate recommended inverter rating (add 25% safety margin)
-    const rating = Math.ceil(total * 1.25)
+    const rating = Math.ceil(total / 0.7)
     setInverterRating(rating)
 
-    // Calculate battery backup time
     if (batteryCapacity && total > 0) {
       const capacity = Number.parseFloat(batteryCapacity)
-      // Battery backup time = (Battery Capacity in Ah × Battery Voltage) / Total Load in Watts
-      // Assuming 12V battery system
       const backupHours = (capacity * 12) / total
       setBackupTime(Math.round(backupHours * 10) / 10)
     } else {
