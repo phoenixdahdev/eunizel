@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#ffa522]/10">
                 <Zap className="h-6 w-6 text-[#ffa522]" fill="#ffa522" />
               </div>
-              <h3 className="mb-4 text-2xl font-bold text-[#050505] md:text-3xl">
+              <h3 className="mb-4 font-mono text-2xl font-bold text-[#050505] md:text-3xl">
                 {feature.title}
               </h3>
               <p className="text-base leading-relaxed text-[#787878] md:text-lg">

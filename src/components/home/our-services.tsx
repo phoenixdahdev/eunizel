@@ -131,7 +131,7 @@ export default function OurServices() {
                   {service.icon}
                 </div>
 
-                <h3 className="text-3xl font-bold text-[#101828]">
+                <h3 className="font-mono text-3xl font-bold text-[#101828]">
                   {service.title}
                 </h3>
 
