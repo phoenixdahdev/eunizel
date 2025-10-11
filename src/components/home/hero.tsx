@@ -50,7 +50,7 @@ export default function Hero() {
         >
           <Link href="/calculator">
             <motion.button
-              className="w-full rounded-lg bg-[#099250] px-8 py-3 text-base font-medium text-white sm:w-auto"
+              className="w-full rounded-lg bg-white px-8 py-3 text-base font-medium text-[#099250] sm:w-auto"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}

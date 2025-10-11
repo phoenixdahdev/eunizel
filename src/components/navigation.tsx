@@ -124,13 +124,18 @@ export default function Header() {
                 href="/"
                 className={cn(
                   'text-[15px] font-semibold transition-colors duration-300',
-                  path === '/' ? 'text-white hover:text-white/80' : ''
+                  path === '/'
+                    ? 'text-white hover:text-white/80'
+                    : 'text-black hover:text-black/80'
                 )}
               >
                 Home
               </Link>
               <motion.div
-                className="absolute bottom-[-4px] left-0 h-0.5 bg-white"
+                className={cn(
+                  'absolute bottom-[-4px] left-0 h-0.5',
+                  path === '/' ? 'bg-white' : 'bg-black'
+                )}
                 initial={{ width: '100%' }}
               />
             </motion.div>
@@ -147,15 +152,20 @@ export default function Header() {
                   <Link
                     href={href}
                     className={cn(
-                      'text-[15px] font-medium text-[#98a2b3] transition-colors duration-300 hover:text-[#667085]',
-                      path === '/' ? 'text-white hover:text-white/80' : ''
+                      'text-[15px] font-medium transition-colors duration-300',
+                      path === '/'
+                        ? 'text-white hover:text-white/80'
+                        : 'text-black hover:text-black/80'
                     )}
                   >
                     {item}
                   </Link>
                   <motion.div
                     variants={underlineVariants}
-                    className="absolute bottom-[-4px] left-0 h-0.5 bg-white"
+                    className={cn(
+                      'absolute bottom-[-4px] left-0 h-0.5',
+                      path === '/' ? 'bg-white' : 'bg-black'
+                    )}
                   />
                 </motion.div>
               )
@@ -178,7 +188,12 @@ export default function Header() {
 
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-white transition-colors duration-300 hover:text-white/80 lg:hidden"
+            className={cn(
+              'p-2 transition-colors duration-300 lg:hidden',
+              path === '/'
+                ? 'text-white hover:text-white/80'
+                : 'text-black hover:text-black/80'
+            )}
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}
           >
@@ -200,11 +215,21 @@ export default function Header() {
               exit="hidden"
               className="overflow-hidden lg:hidden"
             >
-              <nav className="flex flex-col gap-4 border-t border-white/20 py-4">
+              <nav
+                className={cn(
+                  'flex flex-col gap-4 border-t py-4',
+                  path === '/' ? 'border-white/20' : 'border-black/20'
+                )}
+              >
                 <motion.div variants={mobileMenuItemVariants}>
                   <Link
                     href="/"
-                    className="block text-[15px] font-semibold text-white transition-all duration-300 hover:text-white/80"
+                    className={cn(
+                      'block text-[15px] font-semibold transition-all duration-300',
+                      path === '/'
+                        ? 'text-white hover:text-white/80'
+                        : 'text-black hover:text-black/80'
+                    )}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
@@ -222,7 +247,12 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="block text-[15px] font-medium text-white/80 transition-colors duration-300 hover:text-white"
+                      className={cn(
+                        'block text-[15px] font-medium transition-colors duration-300',
+                        path === '/'
+                          ? 'text-white/80 hover:text-white'
+                          : 'text-black/80 hover:text-black'
+                      )}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

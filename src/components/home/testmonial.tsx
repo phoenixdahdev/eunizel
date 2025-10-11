@@ -174,6 +174,15 @@ export default function Testimonials() {
 }
 
 function TextTestimonialCard({ testimonial }: { testimonial: any }) {
+  // Get first 2 letters of the name (skip titles like Mr., Mrs., etc.)
+  const getInitials = (name: string) => {
+    const words = name.split(' ')
+    const mainName = words.find(
+      (word) => !['Mr.', 'Mrs.', 'Ms.', 'Dr.'].includes(word)
+    )
+    return mainName ? mainName.substring(0, 2).toUpperCase() : name.substring(0, 2).toUpperCase()
+  }
+
   return (
     <div className="flex h-full flex-col rounded-2xl border border-[#eaecf0] bg-white p-6">
       {/* Quote Mark */}
@@ -191,13 +200,9 @@ function TextTestimonialCard({ testimonial }: { testimonial: any }) {
 
       {/* Author */}
       <div className="flex items-center gap-3">
-        <Image
-          src={testimonial.avatar || '/placeholder.svg'}
-          alt={testimonial.author}
-          width={48}
-          height={48}
-          className="rounded-full"
-        />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#099250] text-white">
+          <span className="text-lg font-bold">{getInitials(testimonial.author)}</span>
+        </div>
         <div>
           <p className="font-semibold text-[#000000]">{testimonial.author}</p>
           <p className="text-sm text-[#667085]">{testimonial.role}</p>
