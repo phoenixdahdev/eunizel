@@ -8,51 +8,55 @@ const testimonials = [
   {
     type: 'text',
     quote:
-      'From the first consultation to the final installation, Solvance was on point. Great service, top-quality panels, and zero hassle. Highly recommended!',
+      "Eunizel Energy Solutions transformed my home experience. Their solar system runs smoothly, and I haven't had to worry about power outages since installation. The team was professional and polite all through. I'm very impressed.",
     rating: 5,
-    author: 'Omarizichi Opara',
+    author: 'Mr. Chike U.',
     role: 'Homeowner',
     avatar: '/tre.png',
   },
   {
     type: 'text',
     quote:
-      'From the first consultation to the final installation, Solvance was on point. Great service, top-quality panels, and zero hassle. Highly recommended!',
+      'Running my boutique used to be stressful because of poor power supply. Eunizel Energy provided a reliable solar backup that keeps everything running. My expenses on fuel have dropped drastically. I recommend them to every business owner.',
     rating: 5,
-    author: 'Ahmed Olanrewaju',
-    role: 'Homeowner',
-    avatar: '/tre.png',
-  },
-  {
-    type: 'video',
-    image: '/test.png',
-    rating: 5,
-    author: 'Adeola Juniad',
+    author: 'Mrs. Funke A.',
     role: 'Business Owner',
-  },
-  {
-    type: 'video',
-    image: '/test.png',
-    rating: 5,
-    author: 'Christian Obagwere',
-    role: 'Business Owner',
-  },
-  {
-    type: 'text',
-    quote:
-      'From the first consultation to the final installation, Solvance was on point. Great service, top-quality panels, and zero hassle. Highly recommended!',
-    rating: 5,
-    author: 'Philip Nnaemeka-Ofor',
-    role: 'Homeowner',
     avatar: '/tre.png',
   },
   {
     type: 'text',
     quote:
-      'From the first consultation to the final installation, Solvance was on point. Great service, top-quality panels, and zero hassle. Highly recommended!',
+      'The installation process was clean and organized, and they delivered exactly when they said they would. Since then, my family has enjoyed steady power and peace of mind. Eunizel Energy is truly dependable.',
     rating: 5,
-    author: 'Adbul Jamilu',
-    role: 'Homeowner',
+    author: 'Mr. Daniel O.',
+    role: 'Estate Resident (Lekki)',
+    avatar: '/tre.png',
+  },
+  {
+    type: 'text',
+    quote:
+      'Eunizel Energy Solutions helped us cut down our daily generator costs. The solar system they installed powers our lights, music, and POS machines without fail. Excellent service and after-sales support!',
+    rating: 5,
+    author: 'Lounge/hotel',
+    role: 'Management',
+    avatar: '/tre.png',
+  },
+  {
+    type: 'text',
+    quote:
+      'We had constant interruptions during school hours before switching to solar. Thanks to Eunizel Energy, our classrooms now have uninterrupted power throughout the day. Their professionalism and support have been outstanding.',
+    rating: 5,
+    author: 'Mrs. Grace I.',
+    role: 'School Administrator',
+    avatar: '/tre.png',
+  },
+  {
+    type: 'text',
+    quote:
+      "I've worked with several solar companies, but Eunizel Energy stands out for their transparency, neat installation, and commitment to quality. My clients are happy, and I'll continue partnering with them for future projects.",
+    rating: 5,
+    author: 'Mr. Henry N.',
+    role: 'Realtor & Property Developer',
     avatar: '/tre.png',
   },
 ]
