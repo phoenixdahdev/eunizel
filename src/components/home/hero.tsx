@@ -48,7 +48,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
         >
-          <Link href="/calculator">
+          <Link href="mailto:hello@eunizel.com">
             <motion.button
               className="w-full rounded-lg bg-white px-8 py-3 text-base font-medium text-[#099250] sm:w-auto"
               whileHover={{ scale: 1.05, y: -2 }}
