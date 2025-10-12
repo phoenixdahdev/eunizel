@@ -3,6 +3,7 @@ import { Figtree } from 'next/font/google'
 import './globals.css'
 import { cn } from '~/lib/utils'
 import { neueMachina } from '~/fonts'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const fig = Figtree({
   variable: '--font-fig',
@@ -53,6 +54,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn('antialiased', fig.variable, neueMachina.variable)}>
         {children}
+        <GoogleTagManager gtmId="GTM-P5RWF2CW" />
       </body>
     </html>
   )
